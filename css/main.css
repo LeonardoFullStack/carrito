@@ -1,0 +1,83 @@
+* {
+    margin: 0;
+}
+
+header {
+    display:flex;
+    height: 200px;
+    background-color: rgb(20, 1, 31);
+    align-items: center;
+    text-align: center;
+    color: white;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+h1 {
+    margin: 0;
+}
+
+.gridcontainer {
+    display:grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin: 10px 40px;
+}
+
+.contimagen {
+    height: 200px;
+    margin: 0 auto;
+}
+
+.imagen {
+    width: 100%;
+    height: 100%;
+}
+
+.contproducto {
+    height: 300px;
+    margin:0 auto;
+    border: 1px solid grey;
+}
+
+.estrellitas {
+    display:grid;
+    grid-template-columns: repeat(5, 1fr);
+    height: 50px;
+    width:300px;
+}
+
+.estrellita {
+    width: 60px;
+    height: 50px;
+}
+
+.imagenestrella {
+    width: 60px;
+    height: 50px;
+}
+
+.button {
+    text-align: center;
+}
+
+.tabla {
+    border:1px solid black;
+    width: 80%;
+    margin:0 auto;
+}
+
+td {
+    text-align: center;
+}
+
+
+.imagentabla {
+    width: 60px;
+    height: 50px;
+}
+
+#total {
+    text-align: right;
+    margin-right: 200px;
+}
