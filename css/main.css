@@ -6,13 +6,15 @@
 header {
     display:flex;
     height: 200px;
-    background: linear-gradient(to bottom, #240248, #787575);
+    background: linear-gradient(to bottom, var(--amarillo), white);
     align-items: center;
     text-align: center;
-    color: white;
+    color: black;
     justify-content: center;
     margin-bottom: 30px;
 }
+
+
 
 h1 {
     margin: 0;
@@ -20,6 +22,10 @@ h1 {
 
 h2 {
     text-align: center;
+}
+
+:root {
+    --amarillo: rgb(172, 172, 145);
 }
 
 .gridcontainer {
@@ -30,19 +36,22 @@ h2 {
 }
 
 .contimagen {
-    height: 200px;
-    margin: 0 auto;
+    width:300px;
+    display:grid;
+    place-items: center;
+    margin-top: 10px;
 }
 
-.imagen {
-    width: 100%;
-    height: 100%;
+.contimagen img {
+    max-height: 145px;
 }
+
 
 .contproducto {
     height: 320px;
     margin:0 auto;
     border: 1px solid grey;
+    border-radius: 5px;
 }
 
 .estrellitas {
@@ -50,6 +59,7 @@ h2 {
     grid-template-columns: repeat(5, 1fr);
     height: 50px;
     width:300px;
+    margin:0 auto;
 }
 
 .estrellita {
@@ -67,9 +77,14 @@ h2 {
 }
 
 .tabla {
-    border:1px solid black;
+    border:none;
     width: 80%;
-    margin:0 auto;
+    margin:5px auto;
+    margin-top: 20px;
+}
+
+.tabla button {
+    margin:2px;
 }
 
 #paginas {
@@ -99,11 +114,30 @@ td, th {
 
 .carro {
     position:absolute;
-    background-color: white;
-    width: 622px;
+    background-color: rgb(172, 172, 145);
+    width:90%;
+    max-width: 622px;
     height: 298px;
-    top: 13%;
-    left: 4%;
+    top: 23%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 1px solid grey;
+    border-radius: 5px;
+}
+
+.irTabla {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top:158px;
+    padding:10px;
+    border:none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.irTabla:hover {
+    transform: translateX(-50%) scale(1.2);
 }
 
 #vaciar {
@@ -115,7 +149,10 @@ button {
     background-color: black;
     color: white;
     font-size: 16px;
-    border:3px groove black;
+    padding:10px;
+    border:none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 #paginas > button {
@@ -123,7 +160,9 @@ button {
 }
 
 button:hover {
-    background-color: #240248;
+    background-color: white;
+    color: black;
+    border: 2px solid black;
 }
 
 .icono-carrito::before {
@@ -132,10 +171,13 @@ button:hover {
     font-family: "Font Awesome 5 Free";
     font-weight: 900;
     font-size: 3.5rem;
-    color: white;
+    color:black;
     top: 128px;
-    right: 186px;
+    right: 28px;
+    cursor: pointer;
   }
+
+
 
   @media screen and (min-width: 768px) {
     .icono-carrito::before {
@@ -144,9 +186,6 @@ button:hover {
         font-family: "Font Awesome 5 Free";
         font-weight: 900;
         font-size: 5.5rem;
-        color: white;
-        top: 90px;
-        right: 44px;
       }
 
       .gridcontainer {
@@ -158,11 +197,9 @@ button:hover {
 
     .carro {
         position:absolute;
-        background-color: white;
-        width: 622px;
-        height: 298px;
-        top: 13%;
-        left: 37%;
+        top: 231px;
+        right: -292px;
+        left:unset;
     }
   }
 
@@ -176,14 +213,7 @@ button:hover {
   }
 
   @media screen and (min-width: 1200px) {
-    .carro {
-        position:absolute;
-        background-color: white;
-        width: 622px;
-        height: 298px;
-        top: 13%;
-        left: 52%;
-    }
+
 
     .gridcontainer {
         display:grid;

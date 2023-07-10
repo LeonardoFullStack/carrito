@@ -158,8 +158,8 @@ const pintarIndex = async (peticion) => {
 
     grid.innerHTML = '';
     peticion.resp.products.forEach((item) => {
-        const contProducto = document.createElement('DIV');
-        const contImagen = document.createElement('DIV');
+        const contProducto = document.createElement('ARTICLE');
+        const contImagen = document.createElement('FIGURE');
         const contStars = document.createElement('DIV');
         const divInfo = document.createElement('DIV');
         const divButton = document.createElement('DIV');
